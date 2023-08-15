@@ -1,0 +1,35 @@
+<%- include('header.ejs') %>
+<div class="container">
+    <div class="heading">
+        <h1><%=Title %></h1>
+    </div>
+    
+        <ul class="listcont">
+            <% newListItems.forEach((list)=>{%>
+                <div class="items">
+                    <input type="checkbox">
+                    <p><%=list%></p>
+                </div>
+                
+            <%})%>
+
+        </ul>
+    <div class="form">
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="title" value="<%=Title%>">+</button>
+        </form>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+<%- include('footer.ejs') %>
+    
